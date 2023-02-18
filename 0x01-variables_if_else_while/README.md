@@ -5,3 +5,4 @@
 4. Print lowercase except q and e
 5. Print numbers upto 10
 5. Print numbers upto 10 using putchar
+7. Prints alphabet in reverse
