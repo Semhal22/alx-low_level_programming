@@ -3,3 +3,4 @@
 2. Print alphabet
 3. Print lowercase and uppercase alphabets
 4. Print lowercase except q and e
+5. Print numbers upto 10
