@@ -5,3 +5,4 @@
 4. A program of C that prints text
 5. Prints text with printf
 6. Prints different size
+7. Generates assembly code with .s extension
