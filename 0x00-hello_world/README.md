@@ -6,3 +6,4 @@
 5. Prints text with printf
 6. Prints different size
 7. Generates assembly code with .s extension
+8. Print a string without a printf or puts
