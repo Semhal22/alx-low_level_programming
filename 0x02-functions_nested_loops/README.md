@@ -9,3 +9,4 @@
 8. Prints every minute of a day
 9. Print time table
 10. Adds two integers and returns result
+11. Prints all natural numbers upto 98
