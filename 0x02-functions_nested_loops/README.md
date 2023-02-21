@@ -1,2 +1,3 @@
 0. Print _putchar
 1. Print alphabet lowercase
+2. Print 10 lines of alphabets
