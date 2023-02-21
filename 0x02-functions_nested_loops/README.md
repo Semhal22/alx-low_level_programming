@@ -6,3 +6,4 @@
 5. Prints the sign of a number
 6. Computes absolute function of a number
 7. Prints last digit of a number
+8. Prints every minute of a day
