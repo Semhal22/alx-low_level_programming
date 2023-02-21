@@ -4,3 +4,4 @@
 3. A function that checks for lowercase letters
 4. Checks if c is a letter
 5. Prints the sign of a number
+6. Computes absolute function of a number
