@@ -1,4 +1,5 @@
 #include <unistd.h>
+
 /**
  * _isdigit - checks for digit through 1 to 9
  * @c: digit to be checked by function
@@ -8,7 +9,7 @@
  */
 int _isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= 48 && c <= 57)
 		return (1);
 	else
 		return (0);
