@@ -17,4 +17,5 @@ void main(void)
 			num = num / i;
 		}
 	}
+	printf("%d\n", largestPrime);
 }
