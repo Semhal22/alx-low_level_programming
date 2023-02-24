@@ -2,7 +2,7 @@
 /**
  * main - prints numbers from 1 to 100 accordingly
  *
- * Return: 1
+ * Return: 0
  */
 int main(void)
 {
@@ -11,14 +11,18 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
 			printf("Fizz ");
 		else if (i % 5 == 0)
-			printf("Buzz ");
+		{
+			printf("Buzz");
+			if (i != 100)
+				printf(" ");
+		}
 		else
 			printf("%d ", i);
 	}
 	printf("\n");
-	return (1);
+	return (0);
 }
