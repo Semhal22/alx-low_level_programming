@@ -4,9 +4,10 @@
  *
  * Return: 1
  */
-void main(void)
+int main(void)
 {
-	int i, num, largestPrime;
+	int i, largestPrime;
+	long int num;
 
 	num = 612852475143;
 	for (i = 2; num > 1; i++)
@@ -18,4 +19,5 @@ void main(void)
 		}
 	}
 	printf("%d\n", largestPrime);
+	return (0);
 }
