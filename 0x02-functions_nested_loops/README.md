@@ -10,3 +10,5 @@
 9. Print time table
 10. Adds two integers and returns result
 11. Prints all natural numbers upto 98
+12. Prints the n times table
+13. Calculates sum of numbers that are multiples of 3 or 5 below 1024
