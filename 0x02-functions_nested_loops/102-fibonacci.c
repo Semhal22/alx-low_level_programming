@@ -11,7 +11,7 @@ int main(void)
 
 	prev1 = 1;
 	prev2 = 2;
-	i = 0;
+	i = 2;
 	printf("%lu, %lu, ", prev1, prev2);
 	while (i < 50)
 	{
