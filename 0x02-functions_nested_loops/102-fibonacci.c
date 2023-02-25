@@ -6,16 +6,17 @@
  */
 int main(void)
 {
-	int prev1, prev2, num, i;
+	long int prev1, prev2, num;
+	int i;
 
 	prev1 = 1;
 	prev2 = 2;
 	i = 0;
-	printf("%d, %d, ", prev1, prev2);
+	printf("%lu, %lu, ", prev1, prev2);
 	while (i < 50)
 	{
 		num = prev1 + prev2;
-		printf("%d", num);
+		printf("%lu", num);
 		if (i != 49)
 			printf(", ");
 		prev1 = prev2;
