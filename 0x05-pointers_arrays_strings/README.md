@@ -3,3 +3,4 @@
 2. A function that returns the length of a string
 3. Prints a string
 4. Prints a string in reverse
+5. Function that reverses a string
