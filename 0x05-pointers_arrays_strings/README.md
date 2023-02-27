@@ -6,3 +6,4 @@
 5. Function that reverses a string
 6. A function that prints every other character of a string
 7. A function that prints half of a string
+8. Prints n elements of an array
