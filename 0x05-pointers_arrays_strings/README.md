@@ -8,3 +8,4 @@
 7. A function that prints half of a string
 8. Prints n elements of an array
 9. A function that copies a string
+10. Convert a string to an integer
