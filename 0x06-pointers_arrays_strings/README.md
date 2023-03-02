@@ -2,3 +2,4 @@
 1. Concatenates two strings but use at most n bytes from the src
 2. Write a function that copies a string
 3. A function that compares two strings
+4. Reverses the content of an array of integers
