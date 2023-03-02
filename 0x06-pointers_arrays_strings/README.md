@@ -5,3 +5,4 @@
 4. Reverses the content of an array of integers
 5. Changes lowercase letters to uppercase
 6. A function that capitalizes all words of a string
+7. Encodes a string into 1337
