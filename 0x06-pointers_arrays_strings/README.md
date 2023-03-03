@@ -9,4 +9,4 @@ from the src
 7. Encodes a string into 1337
 8. A function that encodes a string using rot13
 9. A function that prints an integer
-10/ Add one line of code so that the program prints 98
+10. Add one line of code so that the program prints 98
