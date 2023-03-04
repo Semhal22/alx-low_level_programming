@@ -16,27 +16,26 @@ void print_buffer(char *b, int size)
 	{
 		for (i = 0; i < size; i += 10)
 		{
-			printf("%.8x:", i);
-			for (j = i; j < i + 10; j++)
+			printf("%08x: ", i);
+			for (j = 0; j < 10; j++)
 			{
-				if (k % 2 == 0)
+				if ((i + j) >= size)
 					printf(" ");
-				if (k < size)
-					printf("%.2x", *(b + j));
 				else
+					printf("%02x", *(b + i + j));
+				if ((j % 2) != 0 && j != 0)
 					printf(" ");
 			}
-			printf(" ");
-			for (k = j; k < j + 10; j++)
+			for (k = 0; k < 10; k++)
 			{
-				if (k >= size)
+				if ((i + k) >= size)
 					break;
-				if (*(b + 1) < 32 || *(b + 1) > 126)
+				if (*(b + i + k) < 32 || *(b + i + k) > 126)
 					printf("%c", '.');
 				else
-					printf("%c", *(b + 1));
+					printf("%c", *(b + i + k));
 			}
 			printf("\n");
 		}
 	}
-
+}
