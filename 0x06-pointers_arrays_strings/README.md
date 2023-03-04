@@ -11,3 +11,4 @@ from the src
 9. A function that prints an integer
 10. Add one line of code so that the program prints 98
 11. Function that adds two numbers i.e adds arrays of characters
+A function that prints a buffer
