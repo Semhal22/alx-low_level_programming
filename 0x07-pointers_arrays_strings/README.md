@@ -6,3 +6,4 @@
 5. A function that locates a substring
 6. Function that prints the chess board
 7. A function that prints the sum of the two diagonals of a square matrix
+8. A function that setwws the value of a pointer to a char
