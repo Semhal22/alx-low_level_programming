@@ -4,3 +4,4 @@
 3. A function that returns the factorial of a number
 4. A function that returns the value of x raised to the power of y
 5. A function that returns the natural squre root of a number
+6. A function that returns 1 if input integer is a prime number, otherwise returns 0
