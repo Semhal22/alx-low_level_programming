@@ -10,7 +10,7 @@ int check_prime(int num, int i)
 {
 	if (i == 1)
 		return (1);
-	else
+	if
 	{
 		if (num % i == 0)
 			return (0);
