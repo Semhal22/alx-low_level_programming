@@ -11,7 +11,7 @@ int check_prime(int num, int i)
 	if (num % i == 0)
 		return (0);
 	else
-		return (check_prime(num, i + 1));
+		return (check_prime(num, i - 1));
 }
 /**
  * is_prime_number - checks if a number is prime
@@ -23,7 +23,9 @@ int check_prime(int num, int i)
 int is_prime_number(int n)
 {
 	if (n == 1)
-		return (1);
+		return (0);
+	else if (n < 1)
+		return (0);
 	else
 		return (check_prime(n, n / 2));
 }
