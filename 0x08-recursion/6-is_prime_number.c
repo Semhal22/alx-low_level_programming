@@ -10,11 +10,10 @@ int check_prime(int num, int i)
 {
 	if (i == 1)
 		return (1);
-	else if (num % i == 0)
+	if (num % i == 0)
 		return (0);
 	else
 		return (check_prime(num, i - 1));
-	}
 }
 /**
  * is_prime_number - checks if a number is prime
