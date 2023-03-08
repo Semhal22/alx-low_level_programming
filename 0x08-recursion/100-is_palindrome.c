@@ -7,7 +7,7 @@ int _strlen(char *str)
 {
 	int i = 0;
 
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 		i++;
 	return (i);
 }
@@ -39,8 +39,8 @@ int is_palindrome(char *s)
 {
 	int len;
 
-	if (*s == '')
-		return (1);
 	len = _strlen(s);
+	if (len == 0)
+		return (1);
 	return (check_palindrome(s, i, len - 1));
 }
