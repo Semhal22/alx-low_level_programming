@@ -10,12 +10,10 @@ int check_prime(int num, int i)
 {
 	if (i == 1)
 		return (1);
-	if
-	{
-		if (num % i == 0)
-			return (0);
-		else
-			return (check_prime(num, i - 1));
+	if (num % i == 0)
+		return (0);
+	else
+		return (check_prime(num, i - 1));
 	}
 }
 /**
