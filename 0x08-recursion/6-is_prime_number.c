@@ -11,7 +11,7 @@ int check_prime(int num, int i)
 	if (num % i == 0)
 		return (0);
 	else
-		return (chedck_prime(num, i + 1));
+		return (check_prime(num, i + 1));
 }
 /**
  * is_prime_number - checks if a number is prime
