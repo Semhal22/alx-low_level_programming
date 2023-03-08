@@ -1,14 +1,16 @@
 /**
  * _strlen - calculatess length of a string
  * @str: string
+ * @i: initial length of string
  * Return: length
  */
-int _strlen(char *str)
+int _strlen(char *str, int i)
 {
-	int i = 0;
-
-	while (str[i] != '\0')
+	if (str[i] != '\0')
+	{
 		i++;
+		_strlen(str + 1, i);
+	}
 	return (i);
 }
 /**
@@ -40,7 +42,7 @@ int is_palindrome(char *s)
 	int len, i;
 
 	i = 0;
-	len = _strlen(s);
+	len = _strlen(s, i);
 	if (len == 0)
 		return (1);
 	return (check_palindrome(s, i, len - 1));
