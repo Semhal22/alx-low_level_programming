@@ -1,17 +1,14 @@
 /**
  * _strlen - calculatess length of a string
  * @str: string
- * @i: initial length of string
  * Return: length
  */
-int _strlen(char *str, int i)
+int _strlen(char *str)
 {
-	if (str[i] != '\0')
-	{
-		i++;
-		_strlen(str + 1, i);
-	}
-	return (i);
+	if (*str)
+		return (1 + _strlen(str + 1));
+	else
+		return (0);
 }
 /**
  * check_palindrome - recursive function to check if palindrome
@@ -30,7 +27,8 @@ int check_palindrome(char *s, int f, int r)
 		return (1);
 	if (s[f] == s[r])
 		return (check_palindrome(s, f + 1, r - 1));
-	return (0);
+	else
+		return (0);
 }
 /**
  * is_palindrome - checks if a string is palindrome
@@ -39,10 +37,9 @@ int check_palindrome(char *s, int f, int r)
  */
 int is_palindrome(char *s)
 {
-	int len, i;
+	int i, len;
 
 	i = 0;
-	len = _strlen(s, i);
 	if (len == 0)
 		return (1);
 	return (check_palindrome(s, i, len - 1));
