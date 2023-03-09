@@ -1,8 +1,5 @@
 /**
- * _strcmp - compares two sdrome("step on no pets");
-					    printf("%d\n", r);
-					        return (0);
-trings
+ * _strcmp - compares two strings
  * @str1: first string
  * @str2: second string
  * @i: index of first string
