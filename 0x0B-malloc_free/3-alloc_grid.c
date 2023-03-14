@@ -24,7 +24,8 @@ int **alloc_grid(int width, int height)
 				i++;
 			else
 			{
-				free(arr[i]);
+				while (--i >= 0)
+					free(map[i]);
 				return (NULL);
 			}
 		}
