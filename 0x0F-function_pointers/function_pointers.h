@@ -3,4 +3,5 @@
 /* Headers for the 0x0F-fuction_pointers project */
 int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
+void array_iterator(int *array, size_t size, void (*action)(int));
 #endif
