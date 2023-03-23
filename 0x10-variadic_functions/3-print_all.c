@@ -1,18 +1,55 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include "variadic_functions.h"
 /**
- * _strlen - Calculates length of a string
- * @str: String
- *
- * Return: Length of string
+ * print_char - Prints a char
+ * @argument: Argument to be printed
  */
-int _strlen(const char * const str)
+void print_char(va_list argument)
 {
-	int len = 0;
+	char character;
 
-	while (str[len] != '\0')
-		len++;
-	return (len);
+	character = va_arg(argument, int);
+	printf("%c", character);
+}
+
+/**
+ * print_int - Prints an integer
+ * @argument: To be printed
+ */
+void print_int(va_list argument)
+{
+	int num;
+
+	num = va_arg(argument, int);
+	printf("%d", num);
+}
+/**
+ * print_float - Prints a float
+ * @argument: To be printed
+ */
+void print_float(va_list argument)
+{
+	float num;
+
+	num = va_arg(argument, double);
+	printf("%f", num);
+}
+/**
+ * print_str - Prints a string
+ * @argument: String to be printed
+ */
+void print_str(va_list argument)
+{
+	char *str;
+
+	str = va_arg(argument, char *);
+	if (str == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", str);
 }
 /**
  * print_all - Prints anything passed as argument
@@ -20,40 +57,32 @@ int _strlen(const char * const str)
  */
 void print_all(const char * const format, ...)
 {
+	print types[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_str},
+		{NULL, NULL}
+	};
 	va_list args;
-	char *str;
-	int n, i = 0;
-	char c;
+	int i, j = 0;
+	char *separator = "";
 
-	n = _strlen(format);
 	va_start(args, format);
-	while (i < n)
+	while (format != NULL && format[j] != '\0')
 	{
-		c = format[i];
-		if (i != 0 && (c == 'c' || c == 'i' || c == 'f' || c == 's'))
-			printf(", ");
-		switch (c)
+		i = 0;
+		while (types[i].type != NULL)
 		{
-			case 'c':
-			printf("%c", va_arg(args, int));
-			break;
-		case 'i':
-			printf("%d", va_arg(args, int));
-			break;
-		case 'f':
-			printf("%f", va_arg(args, double));
-			break;
-		case 's':
-			str = va_arg(args, char *);
-			if (str == NULL)
-				printf("(nil)");
-			else
-				printf("%s", str);
-			break;
-		default:
-			break;
+			if (format[j] == *(types[i].type))
+			{
+				printf("%s", separator);
+				(types[i].func)(args);
+				separator = ", ";
+			}
+			i++;
 		}
-		i++;
+		j++;
 	}
 	va_end(args);
 	printf("\n");
