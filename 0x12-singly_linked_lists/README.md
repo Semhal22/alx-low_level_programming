@@ -5,3 +5,4 @@
 	2. Add node  
 	3. Add node at the end 
 	4. Free list 
+	5. Function that is executed before main 
