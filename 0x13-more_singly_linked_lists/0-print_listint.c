@@ -19,13 +19,14 @@ void print_int(int num)
 size_t print_listint(const listint_t *h)
 {
 	int count = 0;
+	const listint_t *temp = h;
 
-	while (h != NULL)
+	while (temp != NULL)
 	{
-		print_int(h->n);
+		print_int(temp->n);
 		_putchar('\n');
 		count++;
-		h = h->next;
+		temp = temp->next;
 	}
 	return (count);
 }
