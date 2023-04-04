@@ -10,4 +10,5 @@ This repository consists of tasks based on singly linked lists.
 	7. Get node at index - Returns the nth node of a list 
 	8. Sum list - Returns the sum of all the data(n) of list 
 	9. Insert - Inserts a new node at a given position 
+	10. Delete at index - Deletes the node at given index 
    
