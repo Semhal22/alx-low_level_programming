@@ -9,4 +9,5 @@ This repository consists of tasks based on singly linked lists.
 	6. Pop - Deletes the head node 
 	7. Get node at index - Returns the nth node of a list 
 	8. Sum list - Returns the sum of all the data(n) of list 
+	9. Insert - Inserts a new node at a given position 
    
