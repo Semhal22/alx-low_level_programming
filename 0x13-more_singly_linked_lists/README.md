@@ -5,4 +5,6 @@ This repository consists of tasks based on singly linked lists.
 	2. Add node - To the beginning of a linked list 
 	3. Add node at the end 
 	4. Frees a list 
-	5. Free - Frees a list and sets pointer to first to NULL   
+	5. Free - Frees a list and sets pointer to first to NULL 
+	6. Pop - Deletes the head node 
+   
