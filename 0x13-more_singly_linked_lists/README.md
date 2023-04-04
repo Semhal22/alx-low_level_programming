@@ -11,4 +11,4 @@ This repository consists of tasks based on singly linked lists.
 	8. Sum list - Returns the sum of all the data(n) of list 
 	9. Insert - Inserts a new node at a given position 
 	10. Delete at index - Deletes the node at given index 
-   
+	11. Reverse list - Reverses a linked list    
