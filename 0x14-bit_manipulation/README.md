@@ -7,4 +7,5 @@ These tasks are about using bit operators in C for bit manipulation
 	4. 100 - Sets the value of a bit to 0 at a given index 
 	5. 101 - Returns the number of bits needed to flip to get from number to another 
 	6. Endianness - Checks the endianness(where LSB is stored) 
+	7. Crackme3 - Find password of a program   
 
