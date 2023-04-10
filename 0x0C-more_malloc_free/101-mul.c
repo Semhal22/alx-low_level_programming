@@ -1,11 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 /**
  * main - multiplies two digits
  * Prints the result if successful Else it prints
  * error and exits with status of 98
  * @argc: arguments count
  * @argv: array of arguments
+ *
+ * Return: 0 if successful
  */
 int main(int argc, char *argv[])
 {
@@ -29,7 +32,10 @@ int main(int argc, char *argv[])
 		}
 	}
 	mul = malloc(sizeof(argv[1]) * sizeof(argv[2]));
-	*mul = atoi(argv[1]) * atoi(argv[2]);
+	printf("%ld\n", sizeof(mul));
+	printf("%d\n", atoi(argv[1]));
+	*mul = strtol(argv[1]) * strtol(argv[2]);
 	printf("%d\n", *mul);
+	free(mul);
 	return (0);
 }
