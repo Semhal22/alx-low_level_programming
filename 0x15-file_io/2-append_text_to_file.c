@@ -16,26 +16,6 @@ int _strlen(char *str)
 	return (len);
 }
 /**
- * check_NULL - Checks if NULL
- * @string: String to check
- *
- * Return: 0 if NULL, else 1
- */
-int check_NULL(char *string)
-{
-	char *null = "NULL";
-	int i = 0;
-
-	while (null[i] != '\0')
-	{
-		if (string[i] == null[i])
-			i++;
-		else
-			return (1);
-	}
-	return (0);
-}
-/**
  * append_text_to_file - Appends text at the end of a file
  * @filename: Name of file
  * @text_content: String to add to file
@@ -44,24 +24,22 @@ int check_NULL(char *string)
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	char bytes_written;
+	char bytes_written, len;
 	int fd;
 
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_RDWR | O_APPEND);
+	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 		return (-1);
-	if (!access(filename, W_OK))
-	{
-		if (check_NULL(text_content))
-			bytes_written = write(fd, text_content, _strlen(text_content));
-		if (bytes_written == -1)
-			return (-1);
-	}
-	else
+	if (text_content == NULL)
 	{
 		close(fd);
+		return (1);
+	}
+	len = _strlen(text_content);
+	bytes_written = write(fd, text_content, len);
+	if (bytes_written == -1 || len != bytes_written)
 		return (-1);
 	}
 	if (close(fd) == -1)
