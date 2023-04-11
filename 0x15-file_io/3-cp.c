@@ -17,6 +17,7 @@ int main(int argc, char **argv)
 	int fd_from, fd_to, status_from, status_to;
 	char buffer[1024];
 	ssize_t bytes_read, bytes_written;
+	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | IROTH;
 
 	if (argc != 3)
 	{
@@ -31,7 +32,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file%s\n", file_from);
 		exit(98);
 	}
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, mode);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
@@ -55,7 +56,8 @@ int main(int argc, char **argv)
 	status_to = close(fd_to);
 	if (status_from == -1 || status_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", (status_from == -1) ? fd_from : fd_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d
+				\n", (status_from == -1) ? fd_from : fd_to);
 		exit(100);
 	}
 	return (0);
