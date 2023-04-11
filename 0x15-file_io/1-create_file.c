@@ -54,8 +54,9 @@ int create_file(const char *filename, char *text_content)
 	if (check_NULL(text_content))
 	{
 		bytes_written = write(fd, text_content, _strlen(text_content));
-		if (bytes_written == -1)
+		if (bytes_written < 0)
 			return (-1);
 	}
+	close(fd);
 	return (1);
 }
