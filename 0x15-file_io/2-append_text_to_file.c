@@ -52,10 +52,18 @@ int append_text_to_file(const char *filename, char *text_content)
 	fd = open(filename, O_RDWR | O_APPEND);
 	if (fd == -1)
 		return (-1);
-	if (check_NULL(text_content))
-		bytes_written = write(fd, text_content, _strlen(text_content));
-	if (bytes_written == -1)
+	if (!access(filename, W_OK))
+	{
+		if (check_NULL(text_content))
+			bytes_written = write(fd, text_content, _strlen(text_content));
+		if (bytes_written == -1)
+			return (-1);
+	}
+	else
+	{
+		close(fd);
 		return (-1);
+	}
 	close(fd);
 	return (1);
 }
