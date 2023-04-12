@@ -21,7 +21,7 @@ int cp(char *file_from, char *file_to)
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file%s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	fd_to = open(file_to, O_WRONLY | O_TRUNC | O_CREAT, 0664);
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 {
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "USAGE: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "USAGE: cp file_from file_to\n");
 		exit(97);
 	}
 	return (cp(argv[1], argv[2]));
