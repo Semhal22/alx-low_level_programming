@@ -4,4 +4,5 @@
 <ol>
 <li>0. Print list</li>
 <li>1. List Length</li>
+<li>2. Add node</li>
 </ol>
