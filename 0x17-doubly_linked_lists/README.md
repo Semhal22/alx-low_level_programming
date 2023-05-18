@@ -8,4 +8,5 @@
 <li>3. Add node at the end</li>
 <li>4. Free list</li>
 <li>5. Get node at index</li>
+<li>6. Sum of list</li>
 </ol>
