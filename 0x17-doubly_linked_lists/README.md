@@ -9,4 +9,5 @@
 <li>4. Free list</li>
 <li>5. Get node at index</li>
 <li>6. Sum of list</li>
+<li>7. Insert at index</li>
 </ol>
