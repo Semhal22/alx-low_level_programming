@@ -6,4 +6,5 @@
 <li>2. key -> index</li>
 <li>3. >>> ht['betty'] = 'cool'/ Add an element to the hash table</li>
 <li>4. >>> ht['betty']/ Retrieves a value associated with a key</li>
+<li>5. >>> print(ht) / Prints a hash table</li>
 </ul>
