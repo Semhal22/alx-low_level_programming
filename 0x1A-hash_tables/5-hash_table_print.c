@@ -8,7 +8,7 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *temp = NULL;
 	size_t i, j = 0, count = 0;
 
-	if (ht != NULL || ht->size > 0)
+	if (ht != NULL && ht->size > 0)
 	{
 		for (i = 0; i < ht->size; i++)
 		{
