@@ -7,12 +7,22 @@
  *
  * Return: Pointer to the node
  */
-hash_node_t *set_node(hash_node_t *node, char *key, char *value)
+hash_node_t *set_node(hash_node_t *node, const char *key, const char *value)
 {
-	node->key = key;
-	node->value = value;
+	node->key = strdup(key);
+	node->value = strdup(value);
 	node->next = NULL;
 	return (node);
+}
+/**
+ * free_node - Frees a node
+ * @node: Pointer to the node
+ */
+void free_node(hash_node_t *node)
+{
+	free(node->key);
+	free(node->value);
+	free(node);
 }
 /**
  * hash_table_set - Adds an element to the hash table
@@ -33,7 +43,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
-	new_node = set_node(new_node, (char *) key, (char *) value);
+	new_node = set_node(new_node, key, value);
 	head = ht->array[index];
 	if (head == NULL)
 		head = new_node;
@@ -45,7 +55,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (strcmp(temp->key, key) == 0)
 			{
 				update = 1;
+				free_node(new_node);
+				free(temp->value);
 				temp->value = strdup(value);
+				return (1);
 			}
 			temp = temp->next;
 		}

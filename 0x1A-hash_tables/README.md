@@ -7,4 +7,5 @@
 <li>3. >>> ht['betty'] = 'cool'/ Add an element to the hash table</li>
 <li>4. >>> ht['betty']/ Retrieves a value associated with a key</li>
 <li>5. >>> print(ht) / Prints a hash table</li>
+<li>6. >>> del ht / Deletes a hash table</li>
 </ul>
